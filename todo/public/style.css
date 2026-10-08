@@ -1,0 +1,94 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background: #f7f7f5;
+  color: #222;
+}
+
+main {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 0.3rem 0.5rem;
+}
+
+:focus-visible {
+  outline: 2px solid #1a5fb4;
+  outline-offset: 2px;
+}
+
+#message {
+  color: #b00020;
+  min-height: 1.2em;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.4rem;
+  border-left: 4px solid #999;
+  background: #fff;
+  margin-bottom: 0.3rem;
+}
+
+li .title {
+  flex: 1;
+  min-width: 10rem;
+  border: 1px solid transparent;
+  background: transparent;
+}
+
+li .title:hover,
+li .title:focus {
+  border-color: #aaa;
+  background: #fff;
+}
+
+.priority-high { border-left-color: #c01c28; }
+.priority-medium { border-left-color: #e5a50a; }
+.priority-low { border-left-color: #2a7d46; }
+
+.priority {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+li.overdue {
+  background: #fdecec;
+}
+
+li.overdue time {
+  color: #b00020;
+  font-weight: bold;
+}
+
+section[data-group="done"] .title {
+  text-decoration: line-through;
+  color: #777;
+}
