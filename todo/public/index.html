@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart To-Do</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Smart To-Do</h1>
+
+    <form id="add-form">
+      <label for="new-title">Title</label>
+      <input id="new-title" name="title" type="text" required>
+
+      <label for="new-due">Due date</label>
+      <input id="new-due" name="due" type="date">
+
+      <label for="new-priority">Priority</label>
+      <select id="new-priority" name="priority">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+
+      <button type="submit">Add task</button>
+    </form>
+
+    <p id="message" role="status"></p>
+
+    <section aria-labelledby="h-overdue" data-group="overdue" hidden>
+      <h2 id="h-overdue">Overdue</h2>
+      <ul></ul>
+    </section>
+    <section aria-labelledby="h-today" data-group="today" hidden>
+      <h2 id="h-today">Today</h2>
+      <ul></ul>
+    </section>
+    <section aria-labelledby="h-upcoming" data-group="upcoming" hidden>
+      <h2 id="h-upcoming">Upcoming</h2>
+      <ul></ul>
+    </section>
+    <section aria-labelledby="h-nodate" data-group="nodate" hidden>
+      <h2 id="h-nodate">No date</h2>
+      <ul></ul>
+    </section>
+    <section aria-labelledby="h-done" data-group="done" hidden>
+      <h2 id="h-done">Done</h2>
+      <ul></ul>
+    </section>
+  </main>
+</body>
+</html>
